@@ -1,5 +1,5 @@
 # files-generator-cli
-command line tool to that generates files from template definitions
+command line tool that generates files from template definitions
 
 * clone the repo
 * run `npm link` to create sym-link between node directory and generator (run `npm unlink` to remove)
