@@ -3,8 +3,10 @@ Command line tool that generates files from template definitions.
 
 ## Setup
 * clone the repo
+* run `npm install`
 * run `npm link` to create sym-link between node directory and generator (run `npm unlink` to remove)
 
+## Use
 * go to your project folder
 * run `gen comp component-name`
 * directory 'component-name', with .ts .html and .sass files inside, will be created
