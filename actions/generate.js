@@ -1,12 +1,13 @@
-var fs = require('fs');
-var templates = require('./templates');
+const fs = require('fs');
 
 const generate = (template, name) => {
-  //prepare files definitions
-  const templateDef = templates[template];
-  if (!templateDef) {
-    throw `template ${template} not found`;
+  if (!fs.existsSync(`./templates/${template}.js`)) {
+    console.error(`Template file 'templates/${template}.js' was not found.`);
+    return;
   }
+
+  //prepare files definitions
+  const templateDef = require(`../templates/${template}.js`);
   const templateFilesKeys = Object.keys(templateDef.files);
   const filesToGenerate = [];
 
@@ -38,14 +39,17 @@ const generate = (template, name) => {
 };
 
 function processContent(content, name) {
-  const pascal_name = toCasePascal(name);
-  return content
-    .replace(/%pascal_name%/gm, pascal_name);
+  const tokens = {
+    name: name => name,
+    pascal_name: name => toCasePascal(name)
+  };
+  
+  return content.replace(/%(.*?)%/gm, (m, token) => tokens[token](name));
 }
 
 function toCasePascal(value) {
   return value
-    .replace(/(\w)(\w*)/g, (g0, g1, g2) => g1.toUpperCase() + g2.toLowerCase())
+    .replace(/(\w)(\w*)/g, (m, firstLetter, theRest) => firstLetter.toUpperCase() + theRest.toLowerCase())
     .replace(/-/g, '');
 }
 
