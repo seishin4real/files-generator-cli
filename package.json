@@ -1,0 +1,13 @@
+{
+  "name": "gen",
+  "version": "1.0.0",
+  "description": "generates files from template definitions.",
+  "main": "index.js",
+  "preferGlobal": true,
+  "bin": "./commands.js",
+  "author": "seishin",
+  "license": "ISC",
+  "dependencies": {
+    "commander": "^2.11.0"
+  }
+}
