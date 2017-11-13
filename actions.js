@@ -1,5 +1,5 @@
 var fs = require('fs');
-var templates = require('./au-templates');
+var templates = require('./templates');
 
 const generate = (template, name) => {
   //prepare files definitions
