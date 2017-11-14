@@ -1,11 +1,6 @@
 const fs = require('fs');
 
 const generate = (template, name) => {
-  if (!fs.existsSync(`./templates/${template}.js`)) {
-    console.error(`Template file 'templates/${template}.js' was not found.`);
-    return;
-  }
-
   //prepare files definitions
   const templateDef = require(`../templates/${template}.js`);
   const templateFilesKeys = Object.keys(templateDef.files);
