@@ -15,7 +15,8 @@ Command line tool that generates files from template definitions.
 To list available commands run `gen --help`.
 
 ## Templates
-See `templates` directory to:
+See `templates` directory to: 
 * Add new template. Sample file `_template.js` included
+  * template filename must match it's name
 * Remove templates by deleting them
 * Modify templates - just edit the files
