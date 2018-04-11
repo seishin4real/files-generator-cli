@@ -8,6 +8,6 @@
   "author": "seishin",
   "license": "ISC",
   "dependencies": {
-    "commander": "^2.11.0"
+    "commander": "^2.15.1"
   }
 }
