@@ -8,11 +8,12 @@ Command line tool that generates files from template definitions.
 
 ## Use
 * go to your project folder
-* run `gen comp component-name`
-* directory 'component-name', with .ts .html and .sass files inside, will be created
+* run `gen <template_name> <component-name> [-e|--notypes [types]] [-d|--dir]` ex. `gen comp component-name`
+* `-e|--notypes [types]` will exclude given filetypes from generation, ex. `gen comp test-comp -e sass,ts` will create only the html file.
+* `-d|--dir` will create a directory 'component-name', with files defined in the template.
 
 ## Help
-To list available commands run `gen --help`.
+To list available options run `gen [-h|--help]`.
 
 ## Templates
 See `templates` directory to: 

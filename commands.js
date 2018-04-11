@@ -5,7 +5,7 @@ const program = require('commander');
 const { generate } = require('./actions/generate');
 
 program
-  .version('1.0.0', '-v, --version')
+  .version('1.0.1', '-v, --version')
   .usage('<template> <name>')
   .description('Template based files generator. Generates files based on tempate name with apropriate file naming and initial content')
   .on('--help', function () {
