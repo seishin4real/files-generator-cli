@@ -9,7 +9,7 @@ export class %pascal_name%Component {
 
 }`,
 'html': `<template>
-
+  %name% works!
 </template>`,
     'sass': ``
   }
